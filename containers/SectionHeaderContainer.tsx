@@ -1,21 +1,18 @@
 import React from 'react'
-import tw, {styled} from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import { Title, Heading, SubHeading } from '../components/Section/index'
 
-interface Header {
-    header?: boolean
-}
-
-interface Props extends Header {
+interface ISectionHeaderContainerProps {
     title?: string
     heading?: string
     subHeading?: string
+    header?: boolean
 }
 
 export const SectionHeaderContext = React.createContext(false);
 export const SectionHeaderContextProvider = SectionHeaderContext.Provider;
 
-export default function SectionHeaderContainer({ title, heading, subHeading, header }: Props) {
+export default function SectionHeaderContainer({ title, heading, subHeading, header }: ISectionHeaderContainerProps) {
   const contextValue = header ? header : false;
   return (
     <SectionHeaderContainerWrapper>
@@ -28,7 +25,7 @@ export default function SectionHeaderContainer({ title, heading, subHeading, hea
   )
 }
 
-const SectionHeaderContainerWrapper = styled.div(({header}: Header) => [
+const SectionHeaderContainerWrapper = styled.div(() => [
 tw`
     flex
     flex-col

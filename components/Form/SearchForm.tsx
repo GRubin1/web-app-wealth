@@ -7,7 +7,7 @@ export interface ISearchFromProps {
     buttonText?: string
 }
 
-export default function SearchFrom ({ placeholder, buttonText }: ISearchFromProps) {
+export default function SearchForm ({ placeholder, buttonText }: ISearchFromProps) {
   return (
     <FormWrapper>
         <input placeholder={placeholder} />

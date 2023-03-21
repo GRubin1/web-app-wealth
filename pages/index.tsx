@@ -6,7 +6,7 @@ import SectionHeaderContainer from '../containers/SectionHeaderContainer'
 import GridContainer from '../containers/GridContainer'
 import NavBar from '../components/Navbar/Navbar'
 import IconList from '../components/IconList/IconList'
-import SearchFrom from '../components/Form/SearchForm'
+import SearchForm from '../components/Form/SearchForm'
 import { Button, Spacer } from '../components'
 
 const IndexPage = () => (
@@ -19,7 +19,7 @@ const IndexPage = () => (
         subHeading={siteContent.sectionHeader.subHeading}
         header={true}
       />
-      <SearchFrom placeholder={siteContent.forms.searchNow.placeholder} buttonText={'Go'} />
+      <SearchForm placeholder={siteContent.forms.searchNow.placeholder} buttonText={'Go'} />
       <IconList title={siteContent.iconList.asSeen.title} logos={siteContent.iconList.asSeen.logos} />
       <HeaderBg>
         <Image 

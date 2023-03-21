@@ -1,16 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro'
 import Image from 'next/image';
-
-export interface ILogo {
-    url: string
-    alt: string
-    size: {
-        width: number
-        height: number 
-    }
-    extLink?: string
-}
+import { ILogo } from '../../types/images'
 
 export interface IIconListProps {
     logos: Array<ILogo>
@@ -25,7 +16,7 @@ export default function IconList ({ logos, title }: IIconListProps) {
       </ListTitle>
       <AllItems>
         { logos &&
-            logos.map((logo, i) => <Logo key={i}><Image src={logo.url} alt={logo.alt} width={logo.size.width} height={logo.size.height} /></Logo>)
+            logos.map((logo, i) => <Logo key={i}><Image src={logo.src} alt={logo.alt} width={logo.size.width} height={logo.size.height} /></Logo>)
         }
       </AllItems>
     </ListWrapper>

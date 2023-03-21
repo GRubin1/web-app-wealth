@@ -1,4 +1,6 @@
-const logo: string = '/logo.svg'
+import { ILogo } from "./types/images"
+
+const logo: ILogo = { src: '/logo.svg', alt: 'Wealth app', size: { width: 142, height: 29 } }
 const headerBg: string = '/headerBg.jpg'
 
 const iconLoan: string = '/icon-loan-payments.png'
@@ -13,9 +15,9 @@ const titleCredit: string = 'Credit cards'
 
 const defaultDesc: string = 'Compare rates, crunch numbers and get expert guidance for life.'
 
-const logoForbes = { url: '/logo-forbes.svg', alt: 'Forbes', extLink: 'https://www.forbes.com/', size: { width: 132, height: 70 } }
-const logoWsj = { url: '/logo-wsj.svg', alt: 'The Wall Street Journal', extLink: 'https://www.wsj.com/', size: { width: 212, height: 113 }  }
-const logoWealthFront = { url: '/logo-wealthfront.svg', alt: 'Wealthfront', extLink: 'https://www.wealthfront.com/', size: { width: 159, height: 60 }  }
+const logoForbes = { src: '/logo-forbes.svg', alt: 'Forbes', extLink: 'https://www.forbes.com/', size: { width: 132, height: 70 } }
+const logoWsj = { src: '/logo-wsj.svg', alt: 'The Wall Street Journal', extLink: 'https://www.wsj.com/', size: { width: 212, height: 113 }  }
+const logoWealthFront = { src: '/logo-wealthfront.svg', alt: 'Wealthfront', extLink: 'https://www.wealthfront.com/', size: { width: 159, height: 60 }  }
 
 export default {
     header: {
@@ -32,19 +34,19 @@ export default {
             title: 'As seen on',
             logos: [
                 {
-                    url: logoForbes.url, 
+                    src: logoForbes.src, 
                     alt: logoForbes.alt,
                     size: logoForbes.size,
                     extLink: logoForbes.extLink
                 },
                 {
-                    url: logoWsj.url, 
+                    src: logoWsj.src, 
                     alt: logoWsj.alt,
                     size: logoWsj.size,
                     extLink: logoWsj.extLink
                 },
                 {
-                    url: logoWealthFront.url, 
+                    src: logoWealthFront.src, 
                     alt: logoWealthFront.alt,
                     size: logoWealthFront.size,
                     extLink: logoWealthFront.extLink
